@@ -12,19 +12,17 @@ def bubble_sort(numbers)
   numbers
 end
 
-puts bubble_sort([45, 36, 18, 35, 13, 33, 25])
-
 def bubble_sort_by(arr)
   i = 0
   swapp = true
   while swapp == true
     swapp = false
-    while arr[i+1].nil? == false do
-      if arr[i].length > arr[i+1].length
-        arr[i], arr[i+1] = arr[i+1], arr[i]
+    while arr[i + 1].nil? == false
+      if arr[i].length > arr[i + 1].length
+        arr[i], arr[i + 1] = arr[i + 1], arr[i]
         i += 1
         swapp = true
-      elsif arr[i].length <= arr[i+1].length
+      elsif arr[i].length <= arr[i + 1].length
         i += 1
       end
     end
@@ -33,6 +31,6 @@ def bubble_sort_by(arr)
   yield arr
 end
 
-bubble_sort_by(["hi","hello","superfragilistic", "hey", "hooy", "A" ]) { |arr| puts "This is order by length #{arr}!" }
+puts bubble_sort([45, 36, 18, 35, 13, 33, 25])
 
-#bubble_sort_by(["hi","hello","hey", "hooy"])
+bubble_sort_by(%w[hi hello superfragilistic hey hooy A]) { |arr| puts "This is order by length #{arr}!" }
