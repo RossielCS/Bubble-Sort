@@ -1,17 +1,15 @@
 def bubble_sort(numbers)
-    counter = 0
-    i = 0
-    while counter < numbers.length-1
-        if numbers[i] > numbers[i+1]
-            numbers[i], numbers[i+1] = numbers[i+1], numbers[i]
-        end
-        i += 1
-        if i == numbers.length-1
-            counter += 1
-            i = 0
-        end
+  switch = true
+  n = numbers.length - 1
+  while switch == true
+    switch = false
+    n.times do |i|
+      numbers[i], numbers[i + 1] = numbers[i + 1], numbers[i] if numbers[i] > numbers[i + 1]
+      switch = true
     end
-    puts numbers
+    n -= 1
+  end
+  numbers
 end
 
 puts bubble_sort([45, 36, 18, 35, 13, 33, 25])
@@ -34,4 +32,4 @@ def bubble_sort_by(arr)
   puts arr
 end
 
-bubble_sort_by(["hi","hello","hey", "hooy"])
+#bubble_sort_by(["hi","hello","hey", "hooy"])
