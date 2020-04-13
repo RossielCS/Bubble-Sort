@@ -18,19 +18,17 @@ def bubble_sort_by(arr)
   while swapp == true
     swapp = false
     while arr[i + 1].nil? == false
-      if arr[i].length > arr[i + 1].length
+      if yield(arr[i], arr[i + 1]).positive? == true
         arr[i], arr[i + 1] = arr[i + 1], arr[i]
-        i += 1
         swapp = true
-      elsif arr[i].length <= arr[i + 1].length
-        i += 1
       end
+    i += 1
     end
     i = 0
   end
-  yield arr
+  arr
 end
 
 puts bubble_sort([45, 36, 18, 35, 13, 33, 25])
 
-bubble_sort_by(%w[hi hello superfragilistic hey hooy A]) { |arr| puts "This is order by length #{arr}!" }
+puts bubble_sort_by(%w[hi hello superfragilistic hey hooy A]) { |left, right| left.length <=> right.length }
