@@ -22,7 +22,7 @@ def bubble_sort_by(arr)
         arr[i], arr[i + 1] = arr[i + 1], arr[i]
         swapp = true
       end
-    i += 1
+      i += 1
     end
     i = 0
   end
