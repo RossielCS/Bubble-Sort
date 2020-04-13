@@ -1,7 +1,7 @@
 # Bubble-Sort
 In this project we implement the bubble sort algorithm. It was focused on the use of yield and passing a block to a method.
 
-![screenshot](https://user-images.githubusercontent.com/60085697/79005961-66b3e880-7b2e-11ea-8216-8d8c6994ae88.png)
+![screenshot](https://user-images.githubusercontent.com/1808402/79133386-90108680-7d71-11ea-94d5-f3592a673c14.png)
 
 ## Built With
 
