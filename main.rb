@@ -17,7 +17,7 @@ def bubble_sort_by(arr)
   swapp = true
   while swapp
     swapp = false
-    while arr[i + 1].nil? == false
+    until arr[i + 1].nil?
       if yield(arr[i], arr[i + 1]).positive?
         arr[i], arr[i + 1] = arr[i + 1], arr[i]
         swapp = true
