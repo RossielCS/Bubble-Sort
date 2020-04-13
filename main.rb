@@ -1,7 +1,7 @@
 def bubble_sort(numbers)
   switch = true
   n = numbers.length - 1
-  while switch == true
+  while switch
     switch = false
     n.times do |i|
       numbers[i], numbers[i + 1] = numbers[i + 1], numbers[i] if numbers[i] > numbers[i + 1]
@@ -15,10 +15,10 @@ end
 def bubble_sort_by(arr)
   i = 0
   swapp = true
-  while swapp == true
+  while swapp
     swapp = false
     while arr[i + 1].nil? == false
-      if yield(arr[i], arr[i + 1]).positive? == true
+      if yield(arr[i], arr[i + 1]).positive?
         arr[i], arr[i + 1] = arr[i + 1], arr[i]
         swapp = true
       end
